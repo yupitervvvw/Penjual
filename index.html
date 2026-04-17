@@ -2,13 +2,13 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>UX Research Tenun Sumba</title>
+<title>UX Research Penjual Tenun</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
 font-family:'Segoe UI';
-background:linear-gradient(135deg,#667eea,#764ba2);
+background:linear-gradient(135deg,#ff7e5f,#feb47b);
 margin:0;
 }
 
@@ -25,7 +25,7 @@ h1{text-align:center;}
 .section{
 margin-top:20px;
 padding:15px;
-background:#f3f4ff;
+background:#fff4f0;
 border-radius:10px;
 }
 
@@ -50,22 +50,23 @@ border-radius:8px;
 cursor:pointer;
 }
 
-.generate{background:#6c63ff;color:white;}
+.generate{background:#ff7e5f;color:white;}
 .print{background:#00b894;color:white;}
 
 .persona{
 display:flex;
 gap:15px;
-background:#eef;
+background:#fff;
 padding:15px;
 border-radius:10px;
 margin-top:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .avatar{
 width:70px;
 height:70px;
-background:#6c63ff;
+background:#ff7e5f;
 color:white;
 border-radius:50%;
 display:flex;
@@ -75,10 +76,10 @@ font-size:24px;
 }
 
 .step{
-background:#eef;
+background:#fff4f0;
 padding:10px;
 margin:5px 0;
-border-left:4px solid #6c63ff;
+border-left:4px solid #ff7e5f;
 border-radius:6px;
 }
 </style>
@@ -87,35 +88,41 @@ border-radius:6px;
 <body>
 
 <div class="container">
-<h1>✨ UX Research Tenun Sumba</h1>
+<h1>🧵 UX Research Penjual Tenun</h1>
 
-<!-- I. DATA -->
+<!-- I DATA -->
 <div class="section">
-<h2>I. Data Responden</h2>
+<h2>I. Data Responden (Penjual)</h2>
 
 <div class="question">
-<label>Nama Lengkap/Inisial</label>
+<label>Nama Usaha / UMKM</label>
+<input id="usaha">
+</div>
+
+<div class="question">
+<label>Nama Pemilik</label>
 <input id="nama">
 </div>
 
 <div class="question">
-<label>Umur</label>
-<input type="number" id="umur">
+<label>Lama Berusaha</label>
+<select id="lama">
+<option>< 1 tahun</option>
+<option>1-3 tahun</option>
+<option>3-5 tahun</option>
+<option>5-10 tahun</option>
+<option>> 10 tahun</option>
+</select>
 </div>
 
 <div class="question">
-<label>Jenis Pekerjaan</label>
-<input id="pekerjaan">
-</div>
-
-<div class="question">
-<label>Domisili</label>
-<select id="domisili">
-<option>Sumba</option>
-<option>Luar Sumba</option>
-<option>Wisatawan</option>
-<option>Lokal NTT</option>
-<option>Lainnya</option>
+<label>Skala Produksi per bulan</label>
+<select id="produksi">
+<option>< 10 kain</option>
+<option>10-30 kain</option>
+<option>30-50 kain</option>
+<option>50-100 kain</option>
+<option>> 100 kain</option>
 </select>
 </div>
 
@@ -126,35 +133,35 @@ border-radius:6px;
 <h2>II. Behavior</h2>
 
 <div class="question">
-<label>1. Apa yang membuat tertarik membeli tenun?</label>
+<label>Media penjualan saat ini</label>
 <select id="b1">
-<option>Motif unik</option>
-<option>Nilai budaya</option>
-<option>Koleksi pribadi</option>
-<option>Trend fashion</option>
-<option>Hadiah</option>
-</select>
-</div>
-
-<div class="question">
-<label>2. Cara memastikan keaslian?</label>
-<select id="b2">
-<option>Beli langsung pengrajin</option>
-<option>Lihat sertifikat</option>
-<option>Rekomendasi orang</option>
-<option>Cek harga</option>
-<option>Tidak tahu</option>
-</select>
-</div>
-
-<div class="question">
-<label>3. Media cari informasi?</label>
-<select id="b3">
-<option>Instagram</option>
-<option>Google</option>
+<option>Toko fisik</option>
+<option>WhatsApp</option>
 <option>Marketplace</option>
-<option>Teman</option>
-<option>YouTube</option>
+<option>Instagram</option>
+<option>Kombinasi semua</option>
+</select>
+</div>
+
+<div class="question">
+<label>Cara menjelaskan keaslian/motif</label>
+<select id="b2">
+<option>Cerita langsung ke pembeli</option>
+<option>Kirim foto/video</option>
+<option>Testimoni pelanggan</option>
+<option>Sertifikat manual</option>
+<option>Tidak dijelaskan detail</option>
+</select>
+</div>
+
+<div class="question">
+<label>Cara promosi produk baru</label>
+<select id="b3">
+<option>Posting sosial media</option>
+<option>Broadcast WhatsApp</option>
+<option>Diskon/promo</option>
+<option>Rekomendasi pelanggan</option>
+<option>Tidak ada strategi khusus</option>
 </select>
 </div>
 
@@ -165,35 +172,35 @@ border-radius:6px;
 <h2>III. Pain Points</h2>
 
 <div class="question">
-<label>4. Sulit memahami motif?</label>
+<label>Kesulitan jual online</label>
 <select id="p1">
-<option>Sangat sulit</option>
-<option>Cukup sulit</option>
-<option>Biasa saja</option>
-<option>Tidak sulit</option>
-<option>Tidak peduli</option>
-</select>
-</div>
-
-<div class="question">
-<label>5. Kendala beli online?</label>
-<select id="p2">
-<option>Ragu kualitas</option>
-<option>Harga tidak jelas</option>
-<option>Sulit komunikasi</option>
-<option>Takut penipuan</option>
+<option>Foto produk sulit</option>
+<option>Harga sering ditawar</option>
+<option>Pengiriman</option>
+<option>Kurang pembeli</option>
 <option>Tidak ada kendala</option>
 </select>
 </div>
 
 <div class="question">
-<label>6. Bingung bedakan asli vs printing?</label>
-<select id="p3">
+<label>Pembeli ragu keaslian?</label>
+<select id="p2">
 <option>Sering</option>
-<option>Pernah</option>
+<option>Kadang</option>
 <option>Jarang</option>
 <option>Tidak pernah</option>
 <option>Tidak tahu</option>
+</select>
+</div>
+
+<div class="question">
+<label>Kendala kelola stok/pesanan</label>
+<select id="p3">
+<option>Sulit mencatat</option>
+<option>Data tercecer</option>
+<option>Banyak pesanan bingung</option>
+<option>Tidak teratur</option>
+<option>Tidak ada kendala</option>
 </select>
 </div>
 
@@ -204,35 +211,35 @@ border-radius:6px;
 <h2>IV. Needs</h2>
 
 <div class="question">
-<label>7. Butuh fitur edukasi motif?</label>
+<label>Fitur paling membantu</label>
 <select id="n1">
-<option>Sangat butuh</option>
-<option>Butuh</option>
-<option>Biasa saja</option>
-<option>Tidak butuh</option>
-<option>Tidak penting</option>
-</select>
-</div>
-
-<div class="question">
-<label>8. Penting sertifikat digital?</label>
-<select id="n2">
-<option>Sangat penting</option>
-<option>Penting</option>
-<option>Biasa saja</option>
-<option>Tidak penting</option>
-<option>Tidak perlu</option>
-</select>
-</div>
-
-<div class="question">
-<label>9. Fitur paling membantu?</label>
-<select id="n3">
-<option>Zoom detail kain</option>
-<option>Booking custom</option>
-<option>Kurator ahli</option>
-<option>Review user</option>
+<option>Stok otomatis</option>
+<option>Verifikasi keaslian</option>
+<option>Galeri produk</option>
+<option>Manajemen pesanan</option>
 <option>Semua fitur</option>
+</select>
+</div>
+
+<div class="question">
+<label>Perlu profil pengrajin?</label>
+<select id="n2">
+<option>Sangat perlu</option>
+<option>Perlu</option>
+<option>Biasa saja</option>
+<option>Tidak perlu</option>
+<option>Tidak penting</option>
+</select>
+</div>
+
+<div class="question">
+<label>Pendapat tentang pre-order</label>
+<select id="n3">
+<option>Sangat setuju</option>
+<option>Setuju</option>
+<option>Biasa saja</option>
+<option>Tidak setuju</option>
+<option>Tidak perlu</option>
 </select>
 </div>
 
@@ -249,28 +256,29 @@ border-radius:6px;
 function gen(){
 
 let nama = document.getElementById("nama").value;
-let umur = document.getElementById("umur").value;
+let usaha = document.getElementById("usaha").value;
 
 let hasil = `
 <div class="persona">
-<div class="avatar">${nama.charAt(0)}</div>
+<div class="avatar">${usaha.charAt(0)}</div>
 <div>
-<h2>${nama} (${umur})</h2>
-<p>${pekerjaan.value} dari ${domisili.value}</p>
+<h2>${usaha}</h2>
+<p>Pemilik: ${nama}</p>
+<p><b>Pengalaman:</b> ${lama.value}</p>
+<p><b>Produksi:</b> ${produksi.value}</p>
 
-<p><b>Motivasi:</b> ${b1.value}</p>
-<p><b>Perilaku:</b> ${b3.value}</p>
+<p><b>Behavior:</b> ${b1.value}, ${b3.value}</p>
 <p><b>Pain:</b> ${p1.value}, ${p2.value}, ${p3.value}</p>
 <p><b>Needs:</b> ${n1.value}, ${n2.value}, ${n3.value}</p>
 </div>
 </div>
 
-<h2>🗺️ User Journey</h2>
-<div class="step">Awareness → ${b3.value}</div>
-<div class="step">Consideration → ${b1.value}</div>
-<div class="step">Problem → ${p2.value}</div>
-<div class="step">Decision → Membeli Tenun</div>
-<div class="step">Expectation → ${n1.value}</div>
+<h2>🧵 Journey Penjual</h2>
+<div class="step">Promosi → ${b3.value}</div>
+<div class="step">Interaksi → ${b2.value}</div>
+<div class="step">Masalah → ${p1.value}</div>
+<div class="step">Penjualan → Transaksi</div>
+<div class="step">Harapan → ${n1.value}</div>
 `;
 
 document.getElementById("out").innerHTML = hasil;
