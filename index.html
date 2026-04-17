@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>UX Research Tenun Sumba</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+font-family:'Segoe UI';
+background:linear-gradient(135deg,#667eea,#764ba2);
+margin:0;
+}
+
+.container{
+max-width:900px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:15px;
+}
+
+h1{text-align:center;}
+
+.section{
+margin-top:20px;
+padding:15px;
+background:#f3f4ff;
+border-radius:10px;
+}
+
+.question{margin-bottom:15px;}
+
+label{font-weight:bold;}
+
+input,select{
+width:100%;
+padding:8px;
+margin-top:5px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.generate{background:#6c63ff;color:white;}
+.print{background:#00b894;color:white;}
+
+.persona{
+display:flex;
+gap:15px;
+background:#eef;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.avatar{
+width:70px;
+height:70px;
+background:#6c63ff;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+}
+
+.step{
+background:#eef;
+padding:10px;
+margin:5px 0;
+border-left:4px solid #6c63ff;
+border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>✨ UX Research Tenun Sumba</h1>
+
+<!-- I. DATA -->
+<div class="section">
+<h2>I. Data Responden</h2>
+
+<div class="question">
+<label>Nama Lengkap/Inisial</label>
+<input id="nama">
+</div>
+
+<div class="question">
+<label>Umur</label>
+<input type="number" id="umur">
+</div>
+
+<div class="question">
+<label>Jenis Pekerjaan</label>
+<input id="pekerjaan">
+</div>
+
+<div class="question">
+<label>Domisili</label>
+<select id="domisili">
+<option>Sumba</option>
+<option>Luar Sumba</option>
+<option>Wisatawan</option>
+<option>Lokal NTT</option>
+<option>Lainnya</option>
+</select>
+</div>
+
+</div>
+
+<!-- II BEHAVIOR -->
+<div class="section">
+<h2>II. Behavior</h2>
+
+<div class="question">
+<label>1. Apa yang membuat tertarik membeli tenun?</label>
+<select id="b1">
+<option>Motif unik</option>
+<option>Nilai budaya</option>
+<option>Koleksi pribadi</option>
+<option>Trend fashion</option>
+<option>Hadiah</option>
+</select>
+</div>
+
+<div class="question">
+<label>2. Cara memastikan keaslian?</label>
+<select id="b2">
+<option>Beli langsung pengrajin</option>
+<option>Lihat sertifikat</option>
+<option>Rekomendasi orang</option>
+<option>Cek harga</option>
+<option>Tidak tahu</option>
+</select>
+</div>
+
+<div class="question">
+<label>3. Media cari informasi?</label>
+<select id="b3">
+<option>Instagram</option>
+<option>Google</option>
+<option>Marketplace</option>
+<option>Teman</option>
+<option>YouTube</option>
+</select>
+</div>
+
+</div>
+
+<!-- III PAIN -->
+<div class="section">
+<h2>III. Pain Points</h2>
+
+<div class="question">
+<label>4. Sulit memahami motif?</label>
+<select id="p1">
+<option>Sangat sulit</option>
+<option>Cukup sulit</option>
+<option>Biasa saja</option>
+<option>Tidak sulit</option>
+<option>Tidak peduli</option>
+</select>
+</div>
+
+<div class="question">
+<label>5. Kendala beli online?</label>
+<select id="p2">
+<option>Ragu kualitas</option>
+<option>Harga tidak jelas</option>
+<option>Sulit komunikasi</option>
+<option>Takut penipuan</option>
+<option>Tidak ada kendala</option>
+</select>
+</div>
+
+<div class="question">
+<label>6. Bingung bedakan asli vs printing?</label>
+<select id="p3">
+<option>Sering</option>
+<option>Pernah</option>
+<option>Jarang</option>
+<option>Tidak pernah</option>
+<option>Tidak tahu</option>
+</select>
+</div>
+
+</div>
+
+<!-- IV NEEDS -->
+<div class="section">
+<h2>IV. Needs</h2>
+
+<div class="question">
+<label>7. Butuh fitur edukasi motif?</label>
+<select id="n1">
+<option>Sangat butuh</option>
+<option>Butuh</option>
+<option>Biasa saja</option>
+<option>Tidak butuh</option>
+<option>Tidak penting</option>
+</select>
+</div>
+
+<div class="question">
+<label>8. Penting sertifikat digital?</label>
+<select id="n2">
+<option>Sangat penting</option>
+<option>Penting</option>
+<option>Biasa saja</option>
+<option>Tidak penting</option>
+<option>Tidak perlu</option>
+</select>
+</div>
+
+<div class="question">
+<label>9. Fitur paling membantu?</label>
+<select id="n3">
+<option>Zoom detail kain</option>
+<option>Booking custom</option>
+<option>Kurator ahli</option>
+<option>Review user</option>
+<option>Semua fitur</option>
+</select>
+</div>
+
+</div>
+
+<button class="generate" onclick="gen()">🚀 Generate</button>
+<button class="print" onclick="window.print()">🖨️ Print</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function gen(){
+
+let nama = document.getElementById("nama").value;
+let umur = document.getElementById("umur").value;
+
+let hasil = `
+<div class="persona">
+<div class="avatar">${nama.charAt(0)}</div>
+<div>
+<h2>${nama} (${umur})</h2>
+<p>${pekerjaan.value} dari ${domisili.value}</p>
+
+<p><b>Motivasi:</b> ${b1.value}</p>
+<p><b>Perilaku:</b> ${b3.value}</p>
+<p><b>Pain:</b> ${p1.value}, ${p2.value}, ${p3.value}</p>
+<p><b>Needs:</b> ${n1.value}, ${n2.value}, ${n3.value}</p>
+</div>
+</div>
+
+<h2>🗺️ User Journey</h2>
+<div class="step">Awareness → ${b3.value}</div>
+<div class="step">Consideration → ${b1.value}</div>
+<div class="step">Problem → ${p2.value}</div>
+<div class="step">Decision → Membeli Tenun</div>
+<div class="step">Expectation → ${n1.value}</div>
+`;
+
+document.getElementById("out").innerHTML = hasil;
+}
+</script>
+
+</body>
+</html>
